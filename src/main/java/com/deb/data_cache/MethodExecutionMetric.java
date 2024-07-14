@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class MethodExecutionMetric {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut(value = "within(@org.springframework.stereotype.Service *)")
+    @Pointcut(value = "within(@org.springframework.web.bind.annotation.RestController *)")
     public void serviceClassMethods(){}
 
     @Around(value = "serviceClassMethods()")
